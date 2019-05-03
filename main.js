@@ -42,6 +42,10 @@ messaging.onTokenRefresh(function() {
       //showToken('Unable to retrieve refreshed token ', err);
     });
   });
+  messaging.onMessage(function(payload) {
+    console.log('Message received. ', payload);
+    // ...
+  });
   
 
   const sendTokenToServer = (token)=>{
